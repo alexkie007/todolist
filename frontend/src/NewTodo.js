@@ -70,9 +70,9 @@ class NewTodo extends Component {
           </div>
           <div className="priority">
             <select className="form-control" value={this.state.todo.priority}>
-              <option>普通</option>
-              <option>紧急</option>
-              <option>非常紧急</option>
+              <option value='0'>普通</option>
+              <option value='1'>紧急</option>
+              <option value='2'>非常紧急</option>
             </select>
           </div>
         </li>
