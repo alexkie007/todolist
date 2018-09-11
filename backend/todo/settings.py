@@ -130,6 +130,7 @@ CORS_ALLOW_HEADERS = [
 CORS_ORIGIN_WHITELIST = (
     'google.com',
     'localhost:8080',
+    'localhost:5000',
     'localhost:3000',
     '127.0.0.1:8000',
 )
