@@ -15,6 +15,7 @@ class NewTodo extends Component {
     this.addTodo = this.addTodo.bind(this);
     this.contentOnChange = this.contentOnChange.bind(this);
     this.dateOnChange = this.dateOnChange.bind(this);
+    this.priorityOnChange = this.priorityOnChange.bind(this);
   }
 
   addTodo(event) {
@@ -55,6 +56,12 @@ class NewTodo extends Component {
     this.setState(temp)
   }
 
+  priorityOnChange(event){
+    let temp = this.state.todo;
+    temp.priority = event.target.value;
+    this.setState(temp)
+  }
+
   render() {
     return (
       <ul className="list-group">
@@ -69,7 +76,7 @@ class NewTodo extends Component {
             <input className="form-control" type="date" value={this.state.todo.expire_date} onChange={this.dateOnChange}/>
           </div>
           <div className="priority">
-            <select className="form-control" value={this.state.todo.priority}>
+            <select className="form-control" value={this.state.todo.priority} onChange={this.priorityOnChange} >
               <option value='0'>普通</option>
               <option value='1'>紧急</option>
               <option value='2'>非常紧急</option>
