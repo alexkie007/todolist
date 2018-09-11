@@ -20,33 +20,33 @@ class TodoList extends Component {
 
 
   getAll() {
-      axios.get('http://localhost:8000/api/tasks/')
+      axios.get('http://173.255.211.231:8000/api/tasks/')
       .then(function (response) {
           this.setState({todos: response.data.results})
       }.bind(this))
     }
   getAllDone() {
-      axios.get('http://localhost:8000/api/tasks/?done=true')
+      axios.get('http://173.255.211.231:8000/api/tasks/?done=true')
       .then(function (response) {
           this.setState({todos: response.data.results})
       }.bind(this))
   }
   getAllUnDone() {
-      axios.get('http://localhost:8000/api/tasks/?done=false')
+      axios.get('http://173.255.211.231:8000/api/tasks/?done=false')
       .then(function (response) {
           this.setState({todos: response.data.results})
       }.bind(this))
   }
 
   getListOrderByExpireDate() {
-    axios.get('http://localhost:8000/api/tasks/?ordering=-expire_date')
+    axios.get('http://173.255.211.231:8000/api/tasks/?ordering=-expire_date')
     .then(function (response) {
       this.setState({todos: response.data.results})
     }.bind(this))
   }
 
   getListOrderByPriority() {
-    axios.get("http://localhost:8000/api/tasks/?ordering=-priority")
+    axios.get("http://173.255.211.231:8000/api/tasks/?ordering=-priority")
     .then(function (response) {
       this.setState({todos: response.data.results})
     }.bind(this))
@@ -56,7 +56,7 @@ class TodoList extends Component {
   deleteTodo(id) {
     axios({
       method: 'DELETE',
-      url: 'http://localhost:8000/api/tasks/' + id,
+      url: 'http://173.255.211.231:8000/api/tasks/' + id,
       headers: {
         'Content-Type': 'application/json'
       }

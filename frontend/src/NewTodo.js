@@ -20,7 +20,7 @@ class NewTodo extends Component {
   addTodo(event) {
       axios({
         method: 'POST',
-        url: 'http://localhost:8000/api/tasks/',
+        url: 'http://173.255.211.231:8000/api/tasks/',
         data: JSON.stringify({
           content: this.state.todo.content,
           expire_date: this.state.todo.expire_date,
