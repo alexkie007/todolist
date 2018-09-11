@@ -9,7 +9,6 @@ class NewTodo extends Component {
       todo: {
         content: '',
         expire_date: '',
-        priority: 0,
       }
     }
     this.addTodo = this.addTodo.bind(this);
