@@ -48,7 +48,7 @@ class TodoItem extends Component {
   updateTodo() {
      axios({
         method: 'PATCH',
-        url: 'http://localhost:8000/api/tasks/' + this.state.todo.id,
+        url: 'http://173.255.211.231:8000/api/tasks/' + this.state.todo.id,
         data: JSON.stringify({
           id: this.state.todo.id,
           content: this.state.todo.content,
